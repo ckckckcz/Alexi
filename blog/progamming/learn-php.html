@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexi - Pengertian Tentanng CSS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel=" stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .paraf{
+        font-size:15px;
+        color:grey;
+      }
+      .juds{
+        color:#fff;
+        font-size:30px;
+      }
+      .isi{
+        color:white;
+        font-size:17px;
+      }
+      .turo{
+        width:100%;
+        justify-content: center;
+        align-items: center;
+        display:grid;
+        position: relative;
+        margin-bottom:50px
+      }
+      @media only screen and (max-width: 992px) {
+        .paraf{
+          color:grey;
+          font-size:12px;
+        }
+        .juds{
+          color:#fff;
+          font-size:25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="main-overlay"></div>
+      <header class="header-default">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-xl">
+            <!-- logo  -->
+            <a href="javascript:void(0)" class="navbar-brand">
+              <img src="images/alexi.png" alt="" style="width: 70px; margin-left: 10px; margin-top: 5px; margin-bottom: 12px" />
+            </a>
+
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto" style="margin-top: 8px">
+                <li class="nav-item " style="margin-right: 15px">
+                  <a href=".../index" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown active" style="margin-right: 15px">
+                  <a href="javascript:void(0)" class="nav-link dropdown-toggle">Progamming</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="learn-css" class="dropdown-item" style="border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem"><img src="images/CSS3_logo.svg-removebg-preview.png" style="width:20px; margin-right:5px"> <b>Css</b></a>
+                    </li>
+                    <li>
+                      <a href="learn-javascript" class="dropdown-item"><img src="images/js.png" style="width:20px; margin-right:5px"> <b>Javascript</b></a>
+                    </li>
+                    <li>
+                      <a href="learn-php" class="dropdown-item" style="border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem"><img src="images/PHP-logo.svg-removebg-preview.png" style="width:25px; margin-right:5px"> <b>Php</b></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="javascript:void(0)" class="nav-link dropdown-toggle">Framework</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="../framework/bootstrap" class="dropdown-item" style="border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem"><img src="images/Bootstrap_logo.svg-removebg-preview.png" style="width:20px; margin-right:5px"> <b>Bootstrap</b></a>
+                    </li>
+                    <li>
+                      <a href="../framework/laravel" class="dropdown-item" style="border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem"><img src="images/985px-Laravel.svg-removebg-preview.png" style="width:20px; margin-right:5px"> <b>Laravel</b></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- right side of header  -->
+            <div class="header-right">
+              <ul class="social-icons list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="https://instagram.com/ckckckcz/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/iyaokebwang/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/ckckckcz/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/riovaldo-alfiyan-fahmi-rahman-b33880242">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://ignatuslinktree.000webhostapp.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                      <path
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- buttons  -->
+              <div class="header-buttons">
+                <button class="burger-menu icon-button">
+                  <span class="burger-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- section starts  -->
+      <section id="hero">
+        <div class="container-xl">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="post featured-post-lg">
+                <div class="details clearfix">
+                  <a href=".../index" clas.../indexory-badge"><b>Back To Home Page</b></a>
+                  <h2 class="post-title" style="font-size:20px">
+                    <a href="javascript:void(0)">Udah Kenal Sama Bahasa Pemrogaman Css Belum ? Kenalan Dulu Yuk Di Alexi </a>
+                  </h2>
+                  <ul class="meta list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="javascript:void(0)"><b>Riovaldo Alfiyan Fahmi Rahman</b> </a>
+                    </li>
+                    <li class="list-inline-item"><b>02 Mei 2023</b></li>
+                  </ul>
+                </div>
+                <a href="javscript:void(0)">
+                  <div class="thumb rounded">
+                    <div class="inner data-bg-image" data-bg-image="images/css.webp"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 ok">
+              <div class="post-tabs rounded bordered">
+                <ul class="nav nav-tabs nav-pills nav-fill" id="postTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button aria-controls="popular" aria-selected="true" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button"><b>Baca Yang Ini Juga Ya !</b></button>
+                  </li>
+                </ul>
+
+                <!-- content  -->
+                <div class="tab-content" id="postsTabContent">
+                  <!-- loader -->
+                  <div class="lds-dual-ring"></div>
+                  <!-- pop post  -->
+
+                  <div class="tab-pane fade show active" id="popular" aria-labelledby="popular-tab" role="tabpanel">
+                    <!-- post  -->
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="../framework/laravel">
+                          <div class="inner">
+                            <img src="images/985px-Laravel.svg-removebg-preview.png" alt=""/>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="../framework/laravel">Yuk Mengenal Framework PHP, Laravel <img src="images/arrow-upper-right.png" alt="" style="width:13px; margin-left:5px"> </a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item"><b>26 April 2023</b></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post2  -->
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="../framework/bootstrap">
+                          <div class="inner">
+                            <img src="images/Bootstrap_logo.svg-removebg-preview.png" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="../framework/bootstrap">Eitss, Jangan Lupa Juga Yuk Kenalan Sama Framework CSS, Bootstrap <img src="images/arrow-upper-right.png" alt="" style="width:13px; margin-left:5px"></a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item"><b>26 April 2023</b></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post3  -->
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="learn-css">
+                          <div class="inner">
+                            <img src="images/CSS3_logo.svg-removebg-preview.png" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="learn-css">Udah Kenal Sama Bahasa Pemrogaman CSS Belum ?? Kenalan Dulu Yuk <img src="images/arrow-upper-right.png" alt="" style="width:13px; margin-left:5px"></a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item"><b>26 April 2023</b></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post4  -->
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="learn-javascript">
+                          <div class="inner">
+                            <img src="images/js.png" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="learn-javascript">Kalo Bahasa Javascript Udah Tau Belum ? Cari Tau Yuk <img src="images/arrow-upper-right.png" alt="" style="width:13px; margin-left:5px"></a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item"><b>26 April 2023</b></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- recent  -->
+                  <div class="tab-pane fade" id="recent" aria-labelledby="recent-tab" role="tabpanel">
+                    <!-- post 
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="#">
+                          <div class="inner">
+                            <img src="images/posts/tabs-2.jpg" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="#">Clubhouse breaking records of many apps</a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item"><b>26 April 2023</b></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post2  
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="#">
+                          <div class="inner">
+                            <img src="images/posts/tabs-1.jpg" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="#">At what age you should start investing</a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item">26 May 2021</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post3 
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="#">
+                          <div class="inner">
+                            <img src="images/posts/tabs-5.jpg" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="#">Sonu sood foundation providing help in COVID-19</a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item">28 Jun 2021</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- post4  
+                    <div class="post post-list-sm circle">
+                      <div class="thumb circle">
+                        <a href="#">
+                          <div class="inner">
+                            <img src="images/posts/tabs-3.jpg" alt="" />
+                          </div>
+                        </a>
+                      </div>
+                      <div class="details clearfix">
+                        <h6 class="post-title my-0">
+                          <a href="#">Should we invest in soverign gold bonds</a>
+                        </h6>
+                        <ul class="meta list-inline mt-1 mb-0">
+                          <li class="list-inline-item">04 Jun 2021</li>
+                        </ul>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- main content  -->
+
+      <section class="main-content">
+        <div class="container-xl">
+          <div class="row gy-4">
+            <!-- left part 1st section  -->
+            <div class="col-lg-8">
+              <div class="section-header" style="margin-top:-50px">
+                <h3 class="section-title juds">Apa Itu Bahasa Pemrogaman CSS?, Pengertian Sejarah, dan Bagaimanan Cara Penggunaanya</h3>
+              </div>
+
+              <div class="padding-30 rounded bordered">
+                <div class="row gy-5">
+                  <div class="col-sm-6">
+                    <!-- post  -->
+                    <div class="post">
+                      <div class="thumb rounded">
+                        <a href="#">
+                          <div class="inner">
+                            <img src="images/csslagi.png" alt="" style="border-radius:1px"/>
+                          </div>
+                        </a>
+                      </div>
+                      <div style="margin-bottom:50px">
+                        <h5 class="post-title" style="margin-top:35px">
+                          <p class="paraf">Artikel ALEXI – CSS Merupakan Salah Satu Bahasa Pemograman Yang Khusus Digunakan Untuk Mendesain Atau Memperindah Tampilan Website , Pada Artikel Ini ALEXI Akan Membahas Mengenai Apa Itu Bahasa Pemrogaman CSS?, Pengertian Sejarah, dan Bagaimanan Cara Penggunaanya</p>
+                        </h5>
+                      </div>
+                      <div style="margin-bottom:70px">
+                        <h5 class="post-title">
+                          <p class="juds"><k style="color:#d1f577">*</k> Pengertian CSS</p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            Cascading Style Sheet Atau Bisa Dikenal Dengan <k style="color:#d1f577">CSS</k>, Merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. Pada umumnya CSS digunakann untuk memformat tampilan halaman web yang dibuat dengan bahasa HTML dan XHTML.
+                          </p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            CSS dapat mengendalikan <k style="color:#d1f577">ukuran gambar</k>, <k style="color:#d1f577">warna bagian tubuh pada teks</k>, <k style="color:#d1f577">warna tabel</k>, <k style="color:#d1f577">ukuran border</k>, <k style="color:#d1f577">warna border</k>, <k style="color:#d1f577">warna hyperlink</k>, <k style="color:#d1f577">warna mouse over</k>, <k style="color:#d1f577">spasi antar paragraf</k>, <k style="color:#d1f577">spasi antar teks</k>, <k style="color:#d1f577">margin kiri</k>,<k style="color:#d1f577">kanan</k>, <k style="color:#d1f577">kanan</k>, <k style="color: #d1f577;">bawah</k>, dan parameter lainnya.
+                          </p>
+                        </h5>
+                      </div>
+                      <div style="margin-bottom:70px">
+                        <h5 class="post-title">
+                          <p class="juds"><k style="color:#d1f577">*</k> Sejarah CSS</p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            Nama <k style="color:#d1f577">CSS</k> didapat dari fakta bahwa setiap deklarasi style yang berbeda dapat diletakkan secara berurutan, yang kemudian membentuk hubungan seperti orang tua-anak <k style="color:#d1f577">(parent-child)</k> pada setiap style.
+                          </p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            Untuk saat ini terdapat tiga versi CSS, yaitu <k style="color:#d1f577">CSS 1</k>, <k style="color:#d1f577">CSS 2</k>, dan <k style="color:#d1f577">CSS 3</k>. <k style="color:#d1f577">CSS 1</k> dikembangkan berpusat pada pemformatan dokumen HTML, <k style="color:#d1f577">CSS 2</k> dikembangkan untuk memenuhi kebutuhan terhadap format dokumen agar bisa ditampilkan di printer, sedangkan <k style="color:#d1f577">CSS 3</k> adalah versi terbaru dari CSS yang mampu melakukan banyak hal dalam desain website. <k style="color:#d1f577">CSS 3</k> juga mendukung penentuan <k style="color:#d1f577">posisi konten</k>, <k style="color:#d1f577">downloadable</k>, <k style="color:#d1f577">huruf font</k>, <k style="color:#d1f577">tampilan pada tabel /table layout dan media tipe untuk printer</k>. Kehadiran versi CSS yang ketiga diharapkan lebih baik dari versi pertama dan kedua.
+                          </p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            <k style="color:#d1f577">CSS 3</k> juga dapat melakukan animasi pada halaman website, di antaranya <k style="color:#d1f577">animasi warna</k> hingga <k style="color:#d1f577">animasi 3D</k>. Dengan <k style="color:#d1f577">CSS 3</k> desainer lebih dimudahkan dalam hal kompatibilitas websitenya pada smartphone dengan dukungan fitur baru yakni media query. Selain itu, banyak fitur baru pada CSS3 seperti: <k style="color:#d1f577">multiple background</k>, <k style="color:#d1f577">border-radius</k>, <k style="color:#d1f577">drop-shadow</k>, <k style="color:#d1f577">border-image</k>, CSS Math, dan CSS Object Model.
+                          </p>
+                        </h5>
+                      </div>
+                      <div style="margin-bottom:70px">
+                        <h5 class="post-title">
+                          <p class="juds"><k style="color:#d1f577">*</k> Cara Penggunaan CSS</p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi">
+                            Dalam Penggunaan CSS Ada 3 Cara yaitu, <k style="color:#d1f577">Inline Css</k>, <k style="color:#d1f577">Internal Css</k>, Dan <k style="color:#d1f577">External Css</k>. Berikut Untuk Penjelasannya.
+                          </p>
+                        </h5>
+                        <h5 class="post-title">
+                          <p class="isi" style="font-size:25px">
+                            1. <k style="color:#d1f577">Inline Css</k>
+                            <p class="isi">
+                              Inline CSS digunakan untuk memberi style <k style="color:#d1f577">(gaya)</k> pada tag atau elemen HTML tertentu. Kamu dapat menggunakan atribut style untuk memberi style pada tag HTML. Style hanya berlaku untuk tag HTML tersebut. Style di inline CSS memiliki prioritas utama dan yang akan digunakan <k style="color:#d1f577">(rendering)</k> meskipun tag HTML tersebut juga sudah diberi style melalui internal CSS atau external CSS.
+                              <br>
+                              <br>
+                              Pengunaan inline CSS sebenarnya <k style="color:#d1f577">tidak direkomendasikan</k> karena setiap tag HTML perlu diberi style sendiri. Ketika Anda mengubah style di salah satu tag untuk mendapatkan style yang konsisten, Anda juga perlu mengubah style pada tag-tag lainnya. Misalnya, semua tag <k style="color:#d1f577">h4</k> berwarna hijau, ketika Anda ingin mengubah tag <k style="color:#d1f577">h4</k> menjadi berwarna biru, Anda perlu mengubah style di semua <k style="color:#d1f577">h4</k> <k style="color:#d1f577">satu persatu</k> agar berwana biru.
+                              Bentuk contoh kode sederhana sebagai berikut:
+                            </p>
+                          </p>
+                        </h5>
+                        <a href="images/carbon.png">
+                          <img class="turo" src="images/carbon.png" alt="" style="border-radius:10px">
+                        </a>
+                        <h5 class="post-title">
+                          <p class="isi" style="font-size:25px">
+                            2. <k style="color:#d1f577">Internal Css</k>
+                            <p class="isi">
+                              Style yang diberikan diapit oleh tag <k style="color:#d1f577">&lt;style&gt;&lt;/style&gt;</k> dan diletakkan di bagian elemen head atau tag <k style="color:#d1f577">&lt;head&gt;</k> dari laman web. Kamu dapat menggunakan internal CSS bila pemberian style dimaksudkan hanya untuk <k style="color:#d1f577">satu laman web</k> saja dan tidak untuk digunakan di laman <k style="color:#d1f577">web yang lain</k>. Kamu dapat menggunakan internal CSS bila kode untuk style tidak terlalu besar atau kompleks.
+                              Bentuk contoh kode sederhana sebagai berikut:
+                            </p>
+                          </p>
+                        </h5>
+                        <a href="images/carbon1.png">
+                          <img class="turo" src="images/carbon1.png" alt="" style="border-radius:10px">
+                        </a>
+                        <h5 class="post-title">
+                          <p class="isi" style="font-size:25px">
+                            3. <k style="color:#d1f577">External Css</k>
+                            <p class="isi">
+                              External CSS merupakan file berekstensi <k style="color:#d1f577">.css</k> yang hanya berisi kode-kode style. Tujuan menggunakan external CSS adalah untuk memisahkan kode style secara terstruktur. External CSS dapat diaplikasikan pada <k style="color:#d1f577">lebih dari satu</k> laman web sehingga <k style="color:#d1f577">semua laman web</k> akan memiliki tampilan atau desain yang seragam. 
+                              <br>
+                              <br>
+                              Sebagai contoh, buat file HTML dengan nama <k style="color:#d1f577">index.html</k>, dan buat juga file CSS dengan nama <k style="color:#d1f577">style.css</k> menggunakan plain text editor kesayangan kalian seperti <k style="color:#d1f577">Notepad++</k>, <k style="color:#d1f577">Visual Studio Code</k>, Dan <k style="color:#d1f577">Sublime Text</k>. 
+                              <br>
+                              <br>
+                              Kemudian di file HTML dan di bagian tag <k style="color: #d1f577;">&lt;head&gt;</k> tambahkan elemen link atau tag <k style="color: #d1f577;">&lt;link&gt;</k>. Pada Tag <k style="color: #d1f577;">&lt;link&gt;</k> inilah yang akan digunakan untuk menghubungkan file HTML ke file CSS yang dibuat sebelumnya. Perhatikan penulisan <k style="color: #d1f577;">&lt;link&gt;</k> beserta atributnya untuk mengacu ke file CSS. Berikut contoh penulisan codenya,
+                              <a href="images/carbon3.png">
+                                <img class="turo" src="images/carbon3.png" alt="" style="margin-top:20px; width:100%; margin-bottom:30px; border-radius:10px">
+                              </a>
+                              Selanjutnya, di file CSS tuliskan code CSS di bawah ini sebagai style yang akan diberlakukan pada tampilan web. Simpan file CSS di <k style="color: #d1f577;">folder yang sama dimana kamu menyimpan file HTML tersebut</k>.
+                              <a href="images/ingya.png">
+                                <img class="turo" src="images/ingya.png" alt="" style="margin-top:20px; width:100%; margin-bottom:30px; border-radius:10px">
+                              </a>
+                              Berikut contoh code pada file <k style="color:#d1f577">style.css</k>
+                              <a href="images/carbon4.png">
+                                <img class="turo" src="images/carbon4.png" alt="" style="margin-top:20px; margin-bottom:30px; border-radius:10px;  display: block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 350px;">
+                              </a>
+                              Tiga cara diatas yang kita gunakan <k style="color:#d1f577">Inline Css</k>, <k style="color:#d1f577">Internal Css</k>, dan <k style="color:#d1f577">External Css</k>, pada CSS dan HTML kurang lebih menghasilkan tampilan web yang seperti gambar di bawah ini.
+                              <a href="images/back.png">
+                                <img class="turo" src="images/back.png" alt="" style="margin-top:20px; margin-bottom:25px; border-radius:10px;  display: block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 350px;">
+                              </a>
+                            </p>
+                          </p>
+                        </h5>
+                      </div>
+                      <ul class="meta list-inline" style="margin-top:25px; margin-bottom:25px;">
+                        <li class="list-inline-item">
+                          <a href="#">
+                            <img class="author" src="images/owner.jpeg" alt="" style="width:30px"/>
+                            <b>Riovaldo Alfiyan F.R</b>
+                          </a>
+                        </li>
+                        <li class="list-inline-item"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="spacer" data-height="50"></div>
+              <div class="section-header">
+                <h3 class="section-title">Beberapa Website Yang Menyediakan Pembelajaran Tentang Css</h3>
+              </div>
+              <div class="row post-carousel-twoCol post-carousel">
+                <div class="post post-over-content col-md-6">
+                  <div class="details clearfix">
+                    <h4 class="post-title" style="font-size:15px">
+                      <a href="https://www.w3schools.com/css/" class="alq">w3school</a>
+                    </h4>
+                  </div>
+                  <a href="https://www.w3schools.com/css/">
+                    <div class="thumb rounded">
+                      <div class="inner">
+                        <img src="images/cool.jpg" alt="" />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="post post-over-content col-md-6">
+                  <div class="details clearfix">
+                    <h4 class="post-title" style="font-size:15px">
+                      <a href="https://web.dev/learn/css/" class="alq">web.dev</a>
+                    </h4>
+                  </div>
+                  <a href="https://web.dev/learn/css/">
+                    <div class="thumb rounded">
+                      <div class="inner">
+                        <img src="images/webs.avif" alt="" />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="post post-over-content col-md-6">
+                  <div class="details clearfix">
+                    <h4 class="post-title" style="font-size:15px">
+                      <a href="https://www.codecademy.com/learn/learn-css" class="alq">codecademy</a>
+                    </h4>
+                  </div>
+                  <a href="https://www.codecademy.com/learn/learn-css">
+                    <div class="thumb rounded">
+                      <div class="inner">
+                        <img src="images/codecademy.jpg" alt="" />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="post post-over-content col-md-6">
+                  <div class="details clearfix">
+                    <h4 class="post-title" style="font-size:15px">
+                      <a href="https://www.freecodecamp.org/news/learn-css/" class="alq">freecodecamp</a>
+                    </h4>
+                  </div>
+                  <a href="https://www.freecodecamp.org/news/learn-css/">
+                    <div class="thumb rounded">
+                      <div class="inner">
+                        <img src="images/camp.jpg" alt="" />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="spacer" data-height="50"></div>
+
+              <div class="section-header" style="display:none">
+                <h3 class="section-title">Latest Posts</h3>
+              </div>
+
+              <div class="padding-30 rounded bordered" style="border:1px solid grey; display:none">
+                <div class="row">
+                  <div class="text-center">
+                    <button class="btn btn-simple" style="color:#d1f577; border:1px dashad #d1f577; border-radius: 10px; display:none">Males Masukkin Lagi hehe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- left part over here  -->
+            </div>
+            <!-- right part starts from here  -->
+
+            <div class="col-lg-4" style="display:none">
+              <div class="sidebar">
+                <div class="widget rounded">
+                  <div class="widget-about text-center">
+                    <img src="images/900.png" alt="" class="logo" style="width: 70px; margin-right:20px" /><img src="images/alexi.png" alt="" class="logo" style="width: 70px; margin-right:20px" /><img src="images/12.png" alt="" class="logo" style="width: 70px; margin-right:20px" />
+                  </div>
+                </div>
+
+                <div class="widget rounded" style="display:none">
+                  <div class="widget-header text-center">
+                    <h3 class="widget-title"><b>Popular Posts</b></h3>
+                  </div>
+                  <div class="widget-header text-center" style="margin-top:20px">
+                    <h3 class="widget-title" style="font-size: 15px; color:white;"> - Belum Ada - </h3>
+                  </div>
+                  <div class="widget-content">
+                  </div>
+                </div>
+                <div class="widget rounded" style="border:1px solid grey">
+                  <div class="widget-header text-center">
+                    <h3 class="widget-title">Tag Clouds</h3>
+                  </div>
+                  <div class="widget-content">
+                    <a href="javascript:void(0)" class="tag">#Trending</a>
+                    <a href="javascript:void(0)" class="tag">#Progamming</a>
+                    <a href="javascript:void(0)" class="tag">#TeknikInformatika</a>
+                    <a href="javascript:void(0)" class="tag">#Alexi</a>
+                    <a href="javascript:void(0)" class="tag">#Ignatus</a>
+                    <a href="javascript:void(0)" class="tag">#kiwkiw</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container-xl">
+          <div class="footer-inner">
+            <div class="row d-flex align-items-center gy-4">
+              <div class="col-md-4" style="margin-top:50px">
+                <span class="copyright">&copy; <img src="images/alexi.png" style="width:85px"></span>
+              </div>
+              <div class="col-md-4 text-center">
+                <ul class="social-icons list-unstyled list-inline " style="margin-top:50px">
+                  <li class="list-inline-item" style="margin-left:15px">
+                    <a href="https://instagram.com/ckckckcz/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="list-inline-item" style="margin-left:15px">
+                    <a href="https://twitter.com/iyaokebwang/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="list-inline-item" style="margin-left:15px">
+                    <a href="https://github.com/ckckckcz/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="list-inline-item" style="margin-left:15px">
+                    <a href="https://www.linkedin.com/in/riovaldo-alfiyan-fahmi-rahman-b33880242">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="list-inline-item" style="margin-left:15px">
+                    <a href="https://ignatuslinktree.000webhostapp.com/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                        <path
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <a href="#" id="return-to-top" class="float-md-end" style="margin-top:50px">
+                  <i class="icon-arrow-up"></i>
+                  Back to Top
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- canvas menu  -->
+    <div class="canvas-menu d-flex align-items-end flex-column">
+      <button class="btn-close" aria-label="Close" type="button"></button>
+
+      <!-- <div class="logo">
+        <img src="images/alexi.png" alt="" style="width: 70px" />
+      </div> -->
+      <nav>
+        <ul class="vertical-menu">
+          <a href=".../index"class="active">Home</a>
+          <li>
+            <a href="index"> Progamming</a>
+            <ul class="submenu">
+              <li><a href="learn-css">Css</a></li>
+              <li><a href="learn-javascript">Javascript</a></li>
+              <li><a href="learn-php">Php</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="index">Framework</a>
+            <ul class="submenu">
+              <li><a href="../framework/bootstrap">Bootstrap</a></li>
+              <li><a href="../framework/laravel">Laravel</a></li>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="bahaya social-icons list-unstyled list-inline mt-auto w-100" style="margin-bottom:55px">
+        <li class="list-inline-item">
+          <a href="https://instagram.com/ckckckcz/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://twitter.com/iyaokebwang/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://github.com/ckckckcz/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com/in/riovaldo-alfiyan-fahmi-rahman-b33880242">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://ignatuslinktree.000webhostapp.com/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- search pop up  -->
+    <div class="search-popup">
+      <button class="btn-close" aria-label="Close" type="button"></button>
+
+      <div class="search-content">
+        <div class="text-center">
+          <h3 class="mb-4 mt-0">Press ESC to close</h3>
+        </div>
+
+        <form action="" class="d-flex search-form">
+          <input type="search" placeholder="Search and press enter ..." aria-label="Search" class="form-control me-2" />
+          <button class="btn btn-default btn-lg" type="submit">
+            <i class="icon-magnifier"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- javascripts  -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.sticky-sidebar.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
